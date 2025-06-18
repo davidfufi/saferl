@@ -1,0 +1,25 @@
+# ================================================== #
+#          Configuration for SaferRestart            #
+# ================================================== #
+
+# Hier kannst du die Dauer des Countdowns in Sekunden für jeden Befehl festlegen.
+timers:
+  # Dauer für den /saferestart Befehl
+  saferestart: 30
+
+  # Dauer für den /saferl (Reload) Befehl
+  saferl: 10
+
+# Hier kannst du die Befehle definieren, die bei jeder Aktion ausgeführt werden sollen.
+# Die Befehle werden von der Konsole aus in der angegebenen Reihenfolge ausgeführt.
+actions:
+  saferestart:
+    - "stop"
+    # Du könntest hier theoretisch auch andere Befehle hinzufügen,
+    # die vor dem Stoppen ausgeführt werden, z.B. "save-all".
+
+  saferl:
+    - "geyser reload"
+    - "reload"
+    # Du könntest hier auch einen Broadcast-Befehl einfügen, wenn du möchtest.
+    # - "say Reload abgeschlossen!"

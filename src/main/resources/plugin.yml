@@ -1,0 +1,25 @@
+# plugin.yml
+name: SaferRestart
+version: 1.0
+main: de.fufstudio.saferRestart.SaferRestart
+api-version: 1.18
+
+commands:
+  saferestart: # Dein alter Befehl
+    description: Führt einen sicheren Neustart des Servers durch.
+    usage: /<command>
+    permission: saferrestart.use
+    permission-message: §cDu hast keine Berechtigung für diesen Befehl!
+
+  saferl: # Dein NEUER Befehl
+    description: Lädt Geyser und den Server neu (nicht empfohlen!).
+    usage: /<command>
+    permission: saferrestart.reload
+    permission-message: §cDu hast keine Berechtigung für diesen Befehl!
+    # ... (deine bisherige plugin.yml)
+    commands:
+      # ... (deine alten Befehle)
+      safercancel:
+        description: Bricht einen laufenden Neustart- oder Reload-Timer ab.
+        usage: /<command>
+        permission: saferrestart.cancel
